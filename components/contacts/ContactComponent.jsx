@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Container, Grid } from '@material-ui/core'
-import ContactCards from './ContactCards'
+import ContactCards from '../contacts/ContactCards'
 
 const useStyles = makeStyles(theme => ({
     contactContainer: {

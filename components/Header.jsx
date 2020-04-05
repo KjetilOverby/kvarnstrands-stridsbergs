@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
-  Typography,
   makeStyles,
   Tabs,
   Tab,
@@ -15,11 +14,10 @@ import {
   ListItemText,
   Slide,
   useScrollTrigger,
-  Button,
   Menu,
   MenuItem
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/menu';
+import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import logoImage from '../images/Stridsbergs.png';
@@ -149,6 +147,8 @@ const Header = props => {
       setActiveTab(5);
     } else if (window.location.pathname === '/salgsbetingelser' && activeTab !== 5) {
       setActiveTab(5);
+    } else if (window.location.pathname === '/slipeservice' && activeTab !== 5) {
+      setActiveTab(5);
     }
   }, [activeTab]);
 
@@ -174,7 +174,9 @@ const Header = props => {
       </Link>
       <Tab className={classes.tab} label="Om Oss" />
       <Tab className={classes.tab} label="Produkter" />
+      <Link href='/slipeservice'>
       <Tab className={classes.tab} label="Slipeservice" />
+      </Link>
       <Link href="/kontakt">
         <Tab className={classes.tab} label="Kontakt Oss" />
       </Link>
@@ -195,6 +197,7 @@ const Header = props => {
         onClose={handleClose}
         style={{ zIndex: 1500 }}
       >
+        
         <Link href="/stilling">
           <MenuItem onClick={handleClose}>Jobbe hos oss</MenuItem>
         </Link>
@@ -237,9 +240,11 @@ const Header = props => {
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)} divider button>
+          <Link href='/slipeservice'>
             <ListItemText className={classes.drawerItem} disableTypography>
               Slipeservice
             </ListItemText>
+            </Link>
           </ListItem>
 
           <ListItem onClick={() => setOpenDrawer(false)} divider button>

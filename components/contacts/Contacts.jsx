@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Typography, Grid, Card, CardContent, makeStyles } from '@material-ui/core';
-import CardComponent from '../contacts/CardComponent';
-import ContactComponent from '../kontakter/ContactComponent';
+import {  Typography, Grid, makeStyles } from '@material-ui/core';
+
+import ContactComponent from '../contacts/ContactComponent';
 
 const useStyles = makeStyles(theme => ({
   mainContainer: {
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
      }
   },
     header: {
-      color: 'gray',
+      color: 'orangered',
       margin: '3rem',
       [theme.breakpoints.down('sm')]: {
           marginTop: '0rem',

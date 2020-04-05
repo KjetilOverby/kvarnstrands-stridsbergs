@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import Kontaktpersoner from '../contacts/Kontaktpersone'
+import Kontaktpersoner from './Kontaktpersone'
 import { Grid, Card, CardContent, Avatar, makeStyles, Typography } from '@material-ui/core';
 
 import PhoneIcon from '@material-ui/icons/Phone';
@@ -69,8 +69,8 @@ const ContactCards = () => {
         <Grid container justify='space-around'>
           
             {contacts.map((contact) => 
-              <Grid item>
-                 <Card className={classes.card}>
+              <Grid key={contact.name} item>
+                 <Card  className={classes.card}>
                    <CardContent>
                       <Grid container>
                         <Grid item>
@@ -78,7 +78,7 @@ const ContactCards = () => {
                        </Grid>
                        <Grid item>
                        <Typography className={classes.name} variant='h6'>{contact.name}</Typography>
-                       <Typography className={classes.title} variant='p'>{contact.title}</Typography>
+                       <Typography className={classes.title}>{contact.title}</Typography>
                        
                        </Grid>
                        </Grid>
