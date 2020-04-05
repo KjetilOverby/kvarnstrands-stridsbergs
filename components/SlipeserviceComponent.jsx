@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, makeStyles, Typography, Grid, useMediaQuery, useTheme } from '@material-ui/core';
 
-import handShake from '../images/handshake.png';
+import handShake from '../images/handshakeGreenTheme.png';
+import kvarnstrandsLogo from '../images/kvarnstrandsLogoGreenTheme.png'
 const useStyles = makeStyles((theme) => ({
   pageheaderContainer: {
     padding: '7rem 5rem',
@@ -52,10 +53,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headerFirstSectionService: {
-    fontSize: '2rem',
+    fontSize: '3rem',
     color: theme.palette.secondary.main,
     fontWeight: 'bold',
     margin: '3rem 6rem',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2rem'
+    },
     [theme.breakpoints.down('sm')]: {
       marginLeft: '2rem',
     },
@@ -107,7 +111,10 @@ const useStyles = makeStyles((theme) => ({
   text: {
     paddingLeft: '8rem',
     color: theme.palette.secondary.main,
-    fontSize: '1.2rem',
+    fontSize: '1.6rem',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.down('sm')]: {
       paddingLeft: '2rem',
     },
@@ -116,9 +123,12 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '8rem',
     paddingRight: '8rem',
     color: theme.palette.secondary.main,
-    fontSize: '1.1rem',
+    fontSize: '1.5rem',
     marginBottom: '2rem',
 
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.1rem'
+    },
     [theme.breakpoints.down('sm')]: {
       paddingLeft: '2rem',
       marginBottom: '3rem'
@@ -127,7 +137,10 @@ const useStyles = makeStyles((theme) => ({
   list: {
     color: theme.palette.secondary.main,
     marginLeft: '8rem',
-    fontSize: '1rem',
+    fontSize: '1.3rem',
+    [theme.breakpoints.down('lg')]: {
+     fontSize: '1rem'
+    },
     [theme.breakpoints.down('sm')]: {
       marginLeft: '1rem',
       marginBottom: '2.5rem'
@@ -135,12 +148,34 @@ const useStyles = makeStyles((theme) => ({
   },
   header2knives: {
     color: theme.palette.secondary.main,
-    fontSize: '1.3rem',
+    fontSize: '1.8rem',
     paddingBottom: '2rem',
     marginLeft: '8rem',
     fontWeight: 600,
+    [theme.breakpoints.down('lg')]: {
+     fontSize: '1.3rem'
+    },
     [theme.breakpoints.down('sm')]: {
       marginLeft: '2rem'
+    }
+  },
+  logo: {
+    height: '4rem',
+    marginLeft: '8rem',
+  
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '7rem',
+      marginBottom: '2rem',
+      height: '3rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '2rem',
+      marginBottom: '2rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '2rem',
+      marginBottom: '2rem',
+      height: '3rem'
     }
   }
 }));
@@ -151,7 +186,7 @@ const useStyles = makeStyles((theme) => ({
 const SlipeserviceComponent = (props) => {
   const classes = useStyles();
   const themes = useTheme()
-  const matches = useMediaQuery(themes.breakpoints.down('sm'));
+  const matches = useMediaQuery(themes.breakpoints.down('md'));
 
 const computer = (
 <>
@@ -219,7 +254,7 @@ const computer = (
           <ul className={classes.list}>
             <li>Tilpasser</li>
             <li>Problemløsere</li>
-            <li>Kompetnse</li>
+            <li>Kompetanse</li>
             <li>Finish</li>
             <li>Standtid</li>
             <li>Klyvsagblader</li>
@@ -312,6 +347,10 @@ const computer = (
           <Typography className={classes.text2}>
           v/Morten Flatset, mob 951 30 191
           </Typography>
+          <Typography className={classes.text2}>
+          www.kvarnstrands.no
+          </Typography>
+          <img className={classes.logo} src={kvarnstrandsLogo} alt=""/>
         </Grid>
       </Grid>
     </Grid>
@@ -404,7 +443,7 @@ const cellphone = (
       </div>
   <div className={classes.mainContainer}>
   <Grid container>
-    <Grid xs={12} sm={12} md={6} item>
+    <Grid xs={12} sm={12} md={12} item>
       <img
         className={classes.img}
         src="https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
@@ -426,7 +465,7 @@ const cellphone = (
           <ul className={classes.list}>
             <li>Tilpasser</li>
             <li>Problemløsere</li>
-            <li>Kompetnse</li>
+            <li>Kompetanse</li>
             <li>Finish</li>
             <li>Standtid</li>
             <li>Klyvsagblader</li>
@@ -439,7 +478,7 @@ const cellphone = (
 
   <Grid container>
 
-  <Grid xs={12} sm={12} md={6} item>
+  <Grid xs={12} sm={12} md={12} item>
       <img
         className={classes.img}
         src="https://images.unsplash.com/photo-1473621038790-b778b4750efe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80"
@@ -473,7 +512,7 @@ const cellphone = (
   </Grid>
 
   <Grid container>
-    <Grid xs={12} sm={12} md={6} item>
+    <Grid xs={12} sm={12} md={12} item>
       <img
         className={classes.img}
         src="https://images.unsplash.com/photo-1553051021-9f94520a6cad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
@@ -504,7 +543,7 @@ const cellphone = (
   </Grid>
 
   <Grid container>
-  <Grid xs={12} sm={12} md={6} item>
+  <Grid xs={12} sm={12} md={12} item>
       <img
         className={classes.img}
         src="https://images.unsplash.com/photo-1465113959084-ffb1c2c55a1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1273&q=80"
@@ -529,6 +568,10 @@ const cellphone = (
           <Typography className={classes.text2}>
           v/Morten Flatset, mob 951 30 191
           </Typography>
+          <Typography className={classes.text2}>
+          www.kvarnstrands.no
+          </Typography>
+          <img className={classes.logo} src={kvarnstrandsLogo} alt=""/>
         </Grid>
       </Grid>
     </Grid>
@@ -536,7 +579,7 @@ const cellphone = (
   </Grid>
 
   <Grid container>
-    <Grid xs={12} sm={12} md={6} item>
+    <Grid xs={12} sm={12} md={12} item>
       <img
         className={classes.img}
         src="https://admin.mekke.no/thumbnail.php?img=/data/images/2575/IMG_20170706_050142_edited.jpg&h=1201&w=2761"

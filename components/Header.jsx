@@ -20,7 +20,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import logoImage from '../images/Stridsbergs.png';
+import logoImage from '../images/StridsbergsGreenTheme.png';
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {

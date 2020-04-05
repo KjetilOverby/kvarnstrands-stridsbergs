@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles, Grid } from '@material-ui/core';
-import { blue } from '@material-ui/core/colors';
+
 import HomeIcon from '@material-ui/icons/Home';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import MailIcon from '@material-ui/icons/Mail';
-import logoImage from '../images/Stridsbergs2.png';
+import logoImage from '../images/Stridsbergs2GreenTheme.png';
 
 const useStyles = makeStyles(theme => ({
   footer: {

@@ -1,24 +1,33 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
 
+//BlueTheme
+const blueThemePrimary = '#303c6c'
+const blueThemeSecondary = '#b4dfe5'
+//Black Theme
+const blackThemePrimary = '#000'
+const blackThemeSecondary = '#fff'
+//Gray Theme
+const greenThemePrimary = '#2c3531'
+const greenThemeSecondary = '#d9b08c'
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#303c6c'
+      main: greenThemePrimary
     },
     secondary: {
-      main: '#b4dfe5'
+      main: greenThemeSecondary
     },
     error: {
       main: red.A400
     },
     background: {
-      default: '#303c6c'
+      default: greenThemePrimary
     },
 
     myColor: {
-      cl: '#303c6c'
+      cl: greenThemePrimary
     },
     customWhite: {
       white: '#f4efe8'
@@ -26,7 +35,7 @@ const theme = createMuiTheme({
   },
   typography: {
     tab: {
-      color: '#b4dfe5',
+      color: greenThemeSecondary,
       fontSize: '1rem',
       marginLeft: '25px',
       fontweight: 600
