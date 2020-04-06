@@ -7,27 +7,27 @@ const blueThemeSecondary = '#b4dfe5'
 //Black Theme
 const blackThemePrimary = '#000'
 const blackThemeSecondary = '#fff'
-//Gray Theme
+//Green Theme (16 Sleek and Futuristic)
 const greenThemePrimary = '#2c3531'
 const greenThemeSecondary = '#d9b08c'
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: greenThemePrimary
+      main: blackThemePrimary
     },
     secondary: {
-      main: greenThemeSecondary
+      main: blackThemeSecondary
     },
     error: {
       main: red.A400
     },
     background: {
-      default: greenThemePrimary
+      default: blackThemePrimary
     },
 
     myColor: {
-      cl: greenThemePrimary
+      cl: blackThemePrimary
     },
     customWhite: {
       white: '#f4efe8'
@@ -35,7 +35,7 @@ const theme = createMuiTheme({
   },
   typography: {
     tab: {
-      color: greenThemeSecondary,
+      color: blackThemeSecondary,
       fontSize: '1rem',
       marginLeft: '25px',
       fontweight: 600

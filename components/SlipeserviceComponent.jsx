@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, makeStyles, Typography, Grid, useMediaQuery, useTheme } from '@material-ui/core';
 
-import handShake from '../images/handshakeGreenTheme.png';
-import kvarnstrandsLogo from '../images/kvarnstrandsLogoGreenTheme.png'
+import handShake from '../images/handshakeBlackTheme.png';
+import kvarnstrandsLogo from '../images/kvarnstrandsLogoBlackTheme.png'
 const useStyles = makeStyles((theme) => ({
   pageheaderContainer: {
     padding: '7rem 5rem',

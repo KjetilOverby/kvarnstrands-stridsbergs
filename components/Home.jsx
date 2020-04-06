@@ -3,8 +3,11 @@ import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   image: {
+  /*   background:
+      'url("https://images.unsplash.com/photo-1518345598672-283ca2f7c022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")', */
     background:
-      'url("https://images.unsplash.com/photo-1518345598672-283ca2f7c022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")',
+      'url("https://images.unsplash.com/photo-1559568967-3234afd7f360?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1361&q=80")',
+
     height: '60vh',
     width: '100vw',
     backgroundRepeat: 'none',

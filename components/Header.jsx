@@ -20,7 +20,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import logoImage from '../images/StridsbergsGreenTheme.png';
+import logoImage from '../images/StridsbergsBlackTheme.png';
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
@@ -172,8 +172,10 @@ const Header = props => {
       <Link href="/">
         <Tab className={classes.tab} label="Hjem" />
       </Link>
-      <Tab className={classes.tab} label="Om Oss" />
+     
+      <Link href='/produkter'>
       <Tab className={classes.tab} label="Produkter" />
+      </Link>
       <Link href='/slipeservice'>
       <Tab className={classes.tab} label="Slipeservice" />
       </Link>
@@ -229,15 +231,13 @@ const Header = props => {
             </Link>
           </ListItem>
 
+         
           <ListItem onClick={() => setOpenDrawer(false)} divider button>
-            <ListItemText className={classes.drawerItem} disableTypography>
-              Om Oss
-            </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)} divider button>
+          <Link href='/produkter'>
             <ListItemText className={classes.drawerItem} disableTypography>
               Produkter
             </ListItemText>
+            </Link>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)} divider button>
           <Link href='/slipeservice'>

@@ -4,7 +4,7 @@ import { makeStyles, Grid } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import MailIcon from '@material-ui/icons/Mail';
-import logoImage from '../images/Stridsbergs2GreenTheme.png';
+import logoImage from '../images/Stridsbergs2BlackTheme.png';
 
 const useStyles = makeStyles(theme => ({
   footer: {
