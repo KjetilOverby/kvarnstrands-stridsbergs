@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       boxShadow: '10px 10px 10px rgba(0,0,0,.5)',
     },
+   
   },
   img: {
     margin: 0,
@@ -31,7 +32,11 @@ const useStyles = makeStyles((theme) => ({
   },
   toolBoxContainer: {
     padding: '5rem',
+    [theme.breakpoints.down('xs')]: {
+      padding: '1rem'
+    }
   },
+
   boxTextContainer: {
      minHeight: '10rem',
       paddingTop: '1rem'
