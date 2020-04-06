@@ -1,5 +1,6 @@
 import React from 'react'
-import { makeStyles, Grid, Typography, Container, Card, CardContent } from '@material-ui/core'
+import { makeStyles, Grid, Typography, Container, Card, CardContent } from '@material-ui/core';
+import ProductComponentBox from '../components/ProductComponentBox';
 
 const useStyles = makeStyles(theme => ({
    productContainer: {
@@ -58,13 +59,6 @@ const useStyles = makeStyles(theme => ({
         fontSize: '1.1rem'
     }
    },
-   toolbox: {
-   height: '20rem',
-   minWidth: '20rem',
-   border: '1px solid gray',
-
-
-   },
    img: {
     margin: 0,
     display: 'block',
@@ -74,21 +68,16 @@ const useStyles = makeStyles(theme => ({
   },
   root: {
    background: theme.palette.customWhite.white,
-   height: '22rem',
-   minWidth: '20rem',
+   height: '32rem',
    margin: '1rem 1rem',
+   width: '22rem',
    boxShadow: '3px 3px 40px rgba(0,0,0,.3)',
    '&:hover': {
        boxShadow: '10px 10px 10px rgba(0,0,0,.5)'
    }
 
   },
-  toolBoxContainer: {
-      padding: '5rem'
-  },
-  headercard: {
-      marginTop: '2rem'
-  }
+
  
 }))
 const ProdukterComponent = () => {
@@ -112,32 +101,7 @@ const ProdukterComponent = () => {
                </Grid>
                </Container>
 
-               <Grid container justify='center' className={classes.toolBoxContainer}>
-                   <Card className={classes.root} variant='outlined'>
-                       <CardContent>
-                            <img className={classes.img} src="https://admin.mekke.no/data/images/2575/Kvarnstrand_Klinga_H_copy.png" alt=""/>
-                            <Typography className={classes.headercard} variant='h4'>Sirkelsagblad</Typography>
-                       </CardContent>
-                   </Card>
-                   <Card className={classes.root} variant='outlined'>
-                       <CardContent>
-                            <img className={classes.img} src="https://www.eberle-augsburg.de/en/wp-content/uploads/sites/2/revslider/home_variante/slider-home-saege1.png" alt=""/>
-                            <Typography className={classes.headercard} variant='h4'>Båndsagblad</Typography>
-                       </CardContent>
-                   </Card>
-                   <Card className={classes.root} variant='outlined'>
-                       <CardContent>
-                            <img className={classes.img} src="https://cdn.shopify.com/s/files/1/1781/8643/products/Veneer-Lathe-Knife-Isolated_large.png?v=1490635507" alt=""/>
-                            <Typography className={classes.headercard} variant='h4'>Kniver</Typography>
-                       </CardContent>
-                   </Card>
-                   <Card className={classes.root} variant='outlined'>
-                       <CardContent>
-                            <img className={classes.img} src="https://admin.mekke.no/data/images/2575/Kvarnstrand_Fram_V_copy_copy.png" alt=""/>
-                            <Typography className={classes.headercard} variant='h4'>Fresere</Typography>
-                       </CardContent>
-                   </Card>
-               </Grid>
+             <ProductComponentBox />
           </section>
         </div>
     )
