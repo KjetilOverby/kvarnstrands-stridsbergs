@@ -3,62 +3,73 @@ import { Container, makeStyles, Typography, Grid, useMediaQuery, useTheme } from
 
 import handShake from '../images/handshakeBlackTheme.png';
 import kvarnstrandsLogo from '../images/kvarnstrandsLogoBlackTheme.png'
+import SlipeserviceComponentComputer from './SlipeserviceComponentComputer';
+
+const serviceBackgoundColor = '#373636'
+
+const deskWatch = 'url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80")'
+const walkingMan = 'url("https://images.unsplash.com/photo-1571172116849-50afb7a38ddd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4096&q=80")'
 const useStyles = makeStyles((theme) => ({
   pageheaderContainer: {
-    padding: '7rem 5rem',
-    background: theme.palette.customWhite.white,
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: '3rem'
-    }
+    padding: '3rem',
+    background: deskWatch,
+    backgroundSize:'cover',
+    backgroundPosition: 'bottom',
+    
+    [theme.breakpoints.down('xs')]: {
+    padding: 0,
+   
+    },
+   
   },
   headerFirstSection1: {
     fontSize: '4rem',
     color: 'gray',
     fontWeight: 100,
-    marginLeft: '20rem',
+   
     [theme.breakpoints.down('lg')]: {
-      marginLeft: '10rem',
+    
     },
     [theme.breakpoints.down('md')]: {
-      marginLeft: '5rem',
+      fontSize: '2rem'
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '2rem',
+     
       fontSize: '3rem',
     },
     [theme.breakpoints.down('xs')]: {
-      marginLeft: '-3rem',
-      fontSize: '3rem',
+    
+      fontSize: '3rem'
     },
   },
   headerFirstSection: {
     fontSize: '5rem',
     color: 'orangered',
     fontWeight: 'bold',
-    marginLeft: '20rem',
     lineHeight: '1.5rem',
+    marginBottom: '3rem',
     [theme.breakpoints.down('lg')]: {
-      marginLeft: '10rem',
+     
     },
     [theme.breakpoints.down('md')]: {
-      marginLeft: '5rem',
+     fontSize: '3rem'
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '2rem',
+     
       fontSize: '4rem',
     },
     [theme.breakpoints.down('xs')]: {
-      marginLeft: '-3rem',
+   
       fontSize: '3rem',
     },
   },
   headerFirstSectionService: {
-    fontSize: '3rem',
+    fontSize: '2rem',
     color: theme.palette.secondary.main,
     fontWeight: 'bold',
     margin: '3rem 6rem',
     [theme.breakpoints.down('lg')]: {
-      fontSize: '2rem'
+      fontSize: '1.5rem'
     },
     [theme.breakpoints.down('sm')]: {
       marginLeft: '2rem',
@@ -66,26 +77,28 @@ const useStyles = makeStyles((theme) => ({
   },
   paragraphContainer: {
     width: '30rem',
-    marginLeft: '19rem',
-    marginTop: '4rem',
+    marginLeft: '-1rem',
+   
     [theme.breakpoints.down('lg')]: {
-      marginLeft: '9rem',
+     
     },
     [theme.breakpoints.down('md')]: {
-      marginLeft: '4rem',
+    
       width: '20rem',
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '1rem',
+     
     },
     [theme.breakpoints.down('xs')]: {
-      marginLeft: '-4rem',
+     
       fontSize: '3rem',
-      width: '20rem',
+     
     },
   },
   mainContainer: {
     minHeight: '80vh',
+    background: serviceBackgoundColor
+    
   },
 
   img: {
@@ -111,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     paddingLeft: '8rem',
     color: theme.palette.secondary.main,
-    fontSize: '1.6rem',
+    fontSize: '1.2rem',
     [theme.breakpoints.down('lg')]: {
       fontSize: '1.2rem'
     },
@@ -123,11 +136,11 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '8rem',
     paddingRight: '8rem',
     color: theme.palette.secondary.main,
-    fontSize: '1.5rem',
+    fontSize: '1rem',
     marginBottom: '2rem',
 
     [theme.breakpoints.down('lg')]: {
-      fontSize: '1.1rem'
+      fontSize: '1rem'
     },
     [theme.breakpoints.down('sm')]: {
       paddingLeft: '2rem',
@@ -137,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
   list: {
     color: theme.palette.secondary.main,
     marginLeft: '8rem',
-    fontSize: '1.3rem',
+    fontSize: '1rem',
     [theme.breakpoints.down('lg')]: {
      fontSize: '1rem'
     },
@@ -148,12 +161,12 @@ const useStyles = makeStyles((theme) => ({
   },
   header2knives: {
     color: theme.palette.secondary.main,
-    fontSize: '1.8rem',
+    fontSize: '1.1rem',
     paddingBottom: '2rem',
     marginLeft: '8rem',
     fontWeight: 600,
     [theme.breakpoints.down('lg')]: {
-     fontSize: '1.3rem'
+     fontSize: '1rem'
     },
     [theme.breakpoints.down('sm')]: {
       marginLeft: '2rem'
@@ -177,7 +190,42 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '2rem',
       height: '3rem'
     }
+  },
+  productTextBox: {
+    [theme.breakpoints.between(2000, 6000)]: {
+      padding: '3rem',
+      margin: '8rem 0 8rem 20rem',
+    },
+    [theme.breakpoints.between(1900, 1990)]: {
+      padding: '3rem',
+      margin: '2rem 0 2rem 10rem'
+    },
+  
+    [theme.breakpoints.down('lg')]: {
+      padding: '1rem',
+      margin: '2rem 0 2rem 10rem'
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: '1rem',
+      margin: '0rem 0 0rem 2rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '2rem',
+      margin: '0rem 0 0rem 0rem',
+      background: 'rgba(256,256,256,.6)',
+      width: '100vw'
+    }
+   
+  },
+  computerContainer: {
+    minWidth: '80vw',
+    background: serviceBackgoundColor,
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '100vw',
+    },
+   
   }
+ 
 }));
 
 
@@ -186,50 +234,13 @@ const useStyles = makeStyles((theme) => ({
 const SlipeserviceComponent = (props) => {
   const classes = useStyles();
   const themes = useTheme()
-  const matches = useMediaQuery(themes.breakpoints.down('md'));
+  const matches = useMediaQuery(themes.breakpoints.down('sm'));
 
 const computer = (
 <>
-  <div className={classes.pageheaderContainer}>
-  <Grid container>
-    <Grid md={6} container>
-      <Grid item>
-        <Typography className={classes.headerFirstSection1}>
-          Vi utfører
-        </Typography>
-        <Typography className={classes.headerFirstSection}>
-          Slipeservice
-        </Typography>
-        <Container>
-          <Grid className={classes.paragraphContainer} container>
-            <Grid item>
-              <Typography>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem molestiae asperiores, quo similique quam illum
-                iste eligendi enim molestias atque corporis amet odit in,
-                cupiditate eveniet pariatur sequi temporibus
-                soluta!Molestiae dignissimos rerum nemo? Sed enim
-                repudiandae, ducimus qui voluptas laborum quaerat
-                recusandae reiciendis expedita omnis mollitia cumque nihil
-                quos laudantium aperiam facere rerum accusamus! Accusamus
-                distinctio beatae laborum. Ad!
-              </Typography>
-            </Grid>
-          </Grid>
-        </Container>
-      </Grid>
-    </Grid>
 
-    <Grid md={6} container>
-      <Grid item>
-        <img className={classes.illustration} src={handShake} alt="" />
-      </Grid>
-    </Grid>
-  </Grid>
-   
-   
-</div>
-
+  <div style={{backgroundColor: serviceBackgoundColor}}>
+ <Container className={classes.computerContainer}>
   <div className={classes.mainContainer}>
   <Grid container>
     <Grid xs={12} sm={12} md={6} item>
@@ -399,6 +410,8 @@ const computer = (
   </Grid>
 
 </div>
+</Container>
+</div>
 </>
 )
 
@@ -406,42 +419,8 @@ const cellphone = (
 
   <>
 
-<div className={classes.pageheaderContainer}>
-        <Grid container>
-          <Grid md={6} container>
-            <Grid item>
-              <Typography className={classes.headerFirstSection1}>
-                Vi utfører
-              </Typography>
-              <Typography className={classes.headerFirstSection}>
-                Slipeservice
-              </Typography>
-              <Container>
-                <Grid className={classes.paragraphContainer} container>
-                  <Grid item>
-                    <Typography>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolorem molestiae asperiores, quo similique quam illum
-                      iste eligendi enim molestias atque corporis amet odit in,
-                      cupiditate eveniet pariatur sequi temporibus
-                      soluta!Molestiae dignissimos rerum nemo? Sed enim
-                      repudiandae, ducimus qui voluptas laborum quaerat
-                      recusandae reiciendis expedita omnis mollitia cumque nihil
-                      quos laudantium aperiam facere rerum accusamus! Accusamus
-                      distinctio beatae laborum. Ad!
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Container>
-            </Grid>
-          </Grid>
-
-          
-        </Grid>
-         
-         
-      </div>
   <div className={classes.mainContainer}>
+ 
   <Grid container>
     <Grid xs={12} sm={12} md={12} item>
       <img
@@ -620,10 +599,42 @@ const cellphone = (
 )
   return (
     <>
-     
+     <div className={classes.pageheaderContainer}>
 
-      {matches ? cellphone : computer}
+<Grid container>
+  <Grid md={6} container>
+    <Grid className={classes.productTextBox} item>
+      <Typography className={classes.headerFirstSection1}>
+        Vi utfører
+      </Typography>
+      <Typography className={classes.headerFirstSection}>
+        Slipeservice
+      </Typography>
+      <Container>
+        <Grid className={classes.paragraphContainer} container>
+          <Grid item>
+            <Typography>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dolorem molestiae asperiores, quo similique quam illum
+              iste eligendi enim molestias atque corporis amet odit in,
+              cupiditate eveniet pariatur sequi temporibus
+              soluta!Molestiae dignissimos rerum nemo? Sed enim
+              repudiandae.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Grid>
+  </Grid>
 
+
+</Grid>
+ 
+
+</div>
+
+      {matches ? cellphone : computer }
+     {/* <SlipeserviceComponentComputer /> */}
       
      
     </>

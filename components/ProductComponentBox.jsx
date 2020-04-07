@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.customWhite.white,
     height: '32rem',
     margin: '1rem 1rem',
-    width: '22rem',
+    width: '20rem',
     boxShadow: '3px 3px 40px rgba(0,0,0,.3)',
     '&:hover': {
       boxShadow: '10px 10px 10px rgba(0,0,0,.5)',
@@ -31,10 +31,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '2rem',
   },
   toolBoxContainer: {
-    padding: '5rem',
-    [theme.breakpoints.down('xs')]: {
-      padding: '1rem'
-    }
+    padding: '5rem 0'
+    
   },
 
   boxTextContainer: {

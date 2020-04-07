@@ -12,7 +12,8 @@ const useStyles = makeStyles(theme => ({
       maxHeight: '60vh',
       width: '100%',
       backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'
    },
    box: {
       height: '20rem',
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
         height: '18rem',
         width: '33rem'
     },
-    [theme.breakpoints.down('xm')]: {
+    [theme.breakpoints.down('xs')]: {
         height: '20rem',
         width: '33rem'
     }
@@ -88,8 +89,8 @@ const ProdukterComponent = () => {
               <div className={classes.imgBg}>
                   <Grid container>
                       <div className={classes.box}>
-                          <Typography className={classes.headerBox} variant='h4'>Vi selger verktøy til treindustri og privatkunder</Typography>
-                          <Typography className={classes.boxtext}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, laborum earum quaerat optio eveniet sunt.</Typography>
+                          <Typography className={classes.headerBox} variant='h4'>Vi selger verktøy til treindustrien og privatkunder</Typography>
+                          <Typography className={classes.boxtext}>Som en av norges største leverandører av verktøy til treindustrien så kan vi skaffe det meste. Kvalitetsblad for kapp og gjerdesag til privat bruk er også etterspurt. </Typography>
                       </div>
                   </Grid>
               </div>
