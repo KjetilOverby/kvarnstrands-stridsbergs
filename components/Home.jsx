@@ -6,9 +6,9 @@ const useStyles = makeStyles(theme => ({
   /*   background:
       'url("https://images.unsplash.com/photo-1518345598672-283ca2f7c022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")', */
     background:
-      'url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")',
+      'url("https://images.adsttc.com/media/images/5806/d5e7/e58e/ce9c/f600/0116/slideshow/03-2-After.jpg?1476842976")',
 
-    height: '60vh',
+    height: '70vh',
     width: '100vw',
     backgroundRepeat: 'none',
     backgroundSize: 'cover',
@@ -17,6 +17,10 @@ const useStyles = makeStyles(theme => ({
     opacity: '0.6',
     [theme.breakpoints.down('md')]: {
       margin: '-3rem 0 3rem 0'
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '60vw',
+      margin: '0rem 0 -6rem 0'
     }
   },
   textContainer: {

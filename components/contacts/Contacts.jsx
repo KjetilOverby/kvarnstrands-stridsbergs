@@ -11,49 +11,98 @@ const useStyles = makeStyles(theme => ({
      }
   },
   headerContainer: {
-    background: 'url("https://images.unsplash.com/photo-1549176755-e67f625da235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1046&q=80")',
+    background: 'url("https://images.unsplash.com/photo-1516055619834-586f8c75d1de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'bottom',
-    height: '25vh',
+    height: '35vh',
     backgroundAttachment: 'fixed',
+    [theme.breakpoints.between(1900, 1990)]: {
+       height: '40vh',
+       backgroundPosition: 'center'
+    },
     [theme.breakpoints.down('md')]: {
       
-    backgroundAttachment: 'initial'
+    backgroundAttachment: 'initial',
+    height: '45vh',
+    backgroundPosition: 'center'
     },
     [theme.breakpoints.down('sm')]: {
       
      marginTop: '-3rem'
     },
-   
+
     
   },
-    header: {
-      color: 'orangered',
-      margin: '3rem 0',
-      background: 'rgba(0, 0, 0, .6)',
-      padding: '1rem',
-      width: '30vw',
-      textAlign: 'center',
+  headerTextContainer: {
+      margin: '5rem 35rem',
+      width: '25vw',
+      [theme.breakpoints.between(1900, 1990)]: {
+        margin: '5rem 15rem',
+        width: '30vw'
+      },
+      [theme.breakpoints.down('lg')]: {
+        margin: '5rem 10rem',
+        width: '30vw'
+      },
       [theme.breakpoints.down('md')]: {
-          marginTop: '0rem',
+        margin: '3rem 4rem',
+        width: '40vw'
+      },
+      [theme.breakpoints.down('xs')]: {
+        margin: '1rem 1rem',
+        width: '50vw'
+      },
+  },
+  textAboveHeader: {
+     fontSize: '2rem',
+     color: 'gray',
+  [theme.breakpoints.down('xs')]: {
+    fontSize: '1.2rem'
+  }
+  },
+    header: {
+      marginBottom: '1.5rem',
+      color: 'orangered',
+      fontWeight: '600',
+      fontSize: '4rem',
+      width: '40rem',
+      lineHeight: '2rem',
+      [theme.breakpoints.between(1900, 1990)]: {
+      fontSize: '3rem',
+      lineHeight: '1.5rem'
+      },
+      [theme.breakpoints.down('md')]: {
+          marginTop: '-1.5rem',
+          marginBottom: '1rem',
           fontSize: '2.5rem',
           paddingTop: '1rem',
           width: '100vh'
-          
-          
-      }
+        },
+        [theme.breakpoints.down('xs')]: {
+          fontSize: '1.3rem',
+          marginTop: '-1.5rem',
+          marginBottom: '-.5rem'
+        }
 
+    },
+    text: {
+      color: 'gray',
+      marginTop: '1rem'
     }
 }))
 const Contacts = () => {
     const classes = useStyles()
   return (
     <div className={classes.mainContainer}>
-    <Grid container alignItems='center' className={classes.headerContainer}>
+    <Grid container className={classes.headerContainer}>
    
-      <Grid container justify="center">
-        <Typography className={classes.header} variant="h3">Kontaktpersoner</Typography>
+      <Grid container>
+      <Grid  item className={classes.headerTextContainer}>
+      <Typography className={classes.textAboveHeader}>Vi kan hjelpe!</Typography>
+        <Typography className={classes.header} variant="h3">TA KONTAKT I DAG</Typography>
+        <Typography className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores quisquam deleniti necessitatibus excepturi.</Typography>
+        </Grid>
       </Grid>
        <Grid item>
          
