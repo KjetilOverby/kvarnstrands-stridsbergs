@@ -13,7 +13,10 @@ const useStyles = makeStyles(theme => ({
       width: '100%',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
+      backgroundAttachment: 'fixed',
+      [theme.breakpoints.down('md')]: {
+          backgroundAttachment: 'initial'
+      }
    },
    box: {
       height: '20rem',

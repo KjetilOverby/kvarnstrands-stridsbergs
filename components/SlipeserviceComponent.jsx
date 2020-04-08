@@ -5,6 +5,8 @@ import handShake from '../images/handshakeBlackTheme.png';
 import kvarnstrandsLogo from '../images/kvarnstrandsLogoBlackTheme.png'
 import SlipeserviceComponentComputer from './SlipeserviceComponentComputer';
 
+// https://images.unsplash.com/photo-1569968201228-01aebb252e80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80 
+
 const serviceBackgoundColor = '#373636'
 
 const deskWatch = 'url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80")'
@@ -15,7 +17,10 @@ const useStyles = makeStyles((theme) => ({
     background: deskWatch,
     backgroundSize:'cover',
     backgroundPosition: 'bottom',
-    
+    backgroundAttachment: 'fixed',
+    [theme.breakpoints.down('md')]: {
+      backgroundAttachment: 'initial'
+    },
     [theme.breakpoints.down('xs')]: {
     padding: 0,
    
