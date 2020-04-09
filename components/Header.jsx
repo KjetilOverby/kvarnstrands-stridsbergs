@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
   header: {
     height: '10rem',
+   
     [theme.breakpoints.down('md')]: {
       height: '8em'
     },

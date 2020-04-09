@@ -7,7 +7,8 @@ const useStyles = makeStyles(theme => ({
   mainContainer: {
      background: theme.palette.customWhite.white,
      [theme.breakpoints.down('sm')]: {
-       paddingTop: '3rem'
+       paddingTop: '3rem',
+       
      }
   },
   headerContainer: {
@@ -17,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'bottom',
     height: '35vh',
     backgroundAttachment: 'fixed',
+   
     [theme.breakpoints.between(1900, 1990)]: {
        height: '40vh',
        backgroundPosition: 'center'
@@ -37,6 +39,7 @@ const useStyles = makeStyles(theme => ({
   headerTextContainer: {
       margin: '5rem 35rem',
       width: '25vw',
+      overflow: 'hidden',
       [theme.breakpoints.between(1900, 1990)]: {
         margin: '5rem 15rem',
         width: '30vw'
@@ -77,7 +80,7 @@ const useStyles = makeStyles(theme => ({
           marginBottom: '1rem',
           fontSize: '2.5rem',
           paddingTop: '1rem',
-          width: '100vh'
+          
         },
         [theme.breakpoints.down('xs')]: {
           fontSize: '1.3rem',
@@ -98,7 +101,7 @@ const Contacts = () => {
     <Grid container className={classes.headerContainer}>
    
       <Grid container>
-      <Grid  item className={classes.headerTextContainer}>
+      <Grid item className={classes.headerTextContainer}>
       <Typography className={classes.textAboveHeader}>Vi kan hjelpe!</Typography>
         <Typography className={classes.header} variant="h3">TA KONTAKT I DAG</Typography>
         <Typography className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores quisquam deleniti necessitatibus excepturi.</Typography>
