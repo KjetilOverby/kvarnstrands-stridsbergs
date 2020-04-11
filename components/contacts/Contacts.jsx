@@ -33,6 +33,10 @@ const useStyles = makeStyles(theme => ({
       
      marginTop: '-3rem'
     },
+    [theme.breakpoints.down('xs')]: {
+      
+       height: '70vh'
+    },
 
     
   },
@@ -55,6 +59,10 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down('xs')]: {
         margin: '1rem 1rem',
         width: '50vw'
+      },
+      [theme.breakpoints.down(350)]: {
+        margin: '1rem 1rem',
+        width: '58vw'
       },
   },
   textAboveHeader: {

@@ -3,11 +3,13 @@ import { makeStyles, Typography, Container, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
-       maxWidth: '60rem'
+       maxWidth: '60rem',
+   
     },
     salgsContainer: {
         background: theme.palette.customWhite.white,
-        width: '100vw'
+        width: '100vw',
+       
     },
     header: {
         padding: '4rem',
@@ -16,12 +18,18 @@ const useStyles = makeStyles(theme => ({
     },
     conditionHeader: {
        fontWeight: 600,
-       color: '#5b5858'
+       color: '#5b5858',
+        [theme.breakpoints.down('xs')]: {
+           fontSize: '1.2rem'
+        }
     },
     paragraph: {
         marginLeft: '2.2rem',
         fontWeight: 300,
         marginBottom: '1.5rem',
+        [theme.breakpoints.down('xs')]: {
+           fontSize: '1rem'
+        }
         
     },
     ending: {
@@ -54,7 +62,7 @@ const SalgsbetingelserComponent = () => {
                         <Typography className={classes.paragraph} variant='h6'>Alle priser er oppgitt uten merverdigavgift, frakt og evt. spesialemballasje. Prisendringer som følge av endringer i valutekurser, offentlige toll og avgifter mv. som Kvarnstrands & Stridsbergs AS ikke kan påvirke skal komme i tillegg/fradrag til den avtalte pris.</Typography>
                         <Typography className={classes.conditionHeader} variant='h6'><span style={{visibility: 'hidden'}}>0</span>3. Levering</Typography>
                         <Typography className={classes.paragraph} variant='h6'>Alle varer leveres DDP Stange. Ved bruk av Stridsbergs egen servicebil beregnes frakt etter avstand og vekt og/eller etter avtale. Ved bruk av andre transportører blir kunden debitert til selvkost. For varer som ikke er lagervare er oppgitte leveringstider og betrakte som veiledende. Selger plikter å opplyse kjøper om endring i leveringstid så snart dette kommer til hans kunnskap. Overskrider av veiledende levering gir ingen rett til heving av kjøpet og det betales ingen form for erstatning.</Typography>
-                        <Typography className={classes.conditionHeader} variant='h6'><span style={{visibility: 'hidden'}}>0</span>4. Reklamasjoner/undersøkelsesplikt</Typography>
+                        <Typography className={classes.conditionHeader} variant='h6'><span style={{visibility: 'hidden'}}>0</span>4. Reklamasjoner</Typography>
                         <Typography className={classes.paragraph} variant='h6'>Kjøper plikter å kontrollere varene straks etter levering, og gi beskjed umiddelbart etter mottak dersom feil eller manger oppdages. Varer som er tatt i bruk eller som ikke kan framlegges for selger, erstattes ikke.</Typography>
                         <Typography className={classes.conditionHeader} variant='h6'><span style={{visibility: 'hidden'}}>0</span>5. Garanti og ansvar</Typography>
                         <Typography className={classes.paragraph} variant='h6'>Selger garanterer en feilfri, funksjonsdyktig vare i henhold til våre underleverandørers gjeldende spesifikasjoner. Selger skal uten kostnad for kjøper utbedre eventuelle mangler som følge av material- eller fabrikasjonsfeil. Kjøper plikter å gi selger nødvendig tid for å avhjelpe mangelen, samt å stille varen til rådighet for selger gjennom eventuelle demontering og transport til selgers verksted. Våre forpliktelser bortfaller hvis det pviselig er gjort inngrep i varen eller hvis mangelen er oppstått gjennom ukyndig montering eller bruk. Selger sitt ansvar overfor kjøper er begrenset til kjøpers dokumentbare direkte tap., og kan ikke overstige fakturert beløp som danner grunnlag for kravet. Selger er ikke ansvarlig for indirekte tap eller konsekvenstap (inkludert erstatning for tapt fortjeneste eller tapte inntekter, driftsavbrudd eller tap som følge av varens videre anvendelse) som oppstår etter leveransen.</Typography>

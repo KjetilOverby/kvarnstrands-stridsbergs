@@ -46,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
     
       fontSize: '3rem'
     },
+    [theme.breakpoints.down(350)]: {
+    
+      fontSize: '2rem'
+    },
   },
   headerFirstSection: {
     fontSize: '5rem',
@@ -66,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
    
       fontSize: '3rem',
+    },
+    [theme.breakpoints.down(350)]: {
+   
+      fontSize: '2rem',
     },
   },
   headerFirstSectionService: {
@@ -97,6 +105,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
      
       fontSize: '3rem',
+     
+    },
+    [theme.breakpoints.down(350)]: {
+       width: '17rem',
+
      
     },
   },

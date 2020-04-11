@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
       backgroundAttachment: 'fixed',
       [theme.breakpoints.down('md')]: {
           backgroundAttachment: 'initial'
-      }
+      },
+     
    },
    box: {
       height: '20rem',
@@ -31,6 +32,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
         height: '20rem',
         width: '33rem'
+    },
+    [theme.breakpoints.down(350)]: {
+        height: '17rem',
+        width: '33rem'
     }
    },
    headerBox: {
@@ -42,6 +47,9 @@ const useStyles = makeStyles(theme => ({
        },
        [theme.breakpoints.down('xs')]: {
            fontSize: '1.2rem'
+       },
+       [theme.breakpoints.down(350)]: {
+           fontSize: '1rem'
        }
    },
    boxtext: {
@@ -50,6 +58,9 @@ const useStyles = makeStyles(theme => ({
        fontWeight: 500,
        [theme.breakpoints.down('sm')]: {
         fontSize: '1rem'
+    },
+       [theme.breakpoints.down(350)]: {
+        fontSize: '.8rem'
     }
    },
    section: {
