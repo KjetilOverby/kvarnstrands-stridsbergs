@@ -16,6 +16,8 @@ export default function Index() {
       <Home />
 
       <Footer />
+
+  
     </div>
   );
 }

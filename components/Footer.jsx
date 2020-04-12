@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Grid } from '@material-ui/core';
+import { makeStyles, Grid, Typography } from '@material-ui/core';
 
 import HomeIcon from '@material-ui/icons/Home';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
@@ -13,9 +13,10 @@ const useStyles = makeStyles(theme => ({
     zIndex: 1302,
     position: 'relative',
     height: '14em',
+    padding: '3rem 0 0 0',
     
     [theme.breakpoints.down('md')]: {
-      height: '14em'
+     
     },
     [theme.breakpoints.down('sm')]: {
       height: '30em',
@@ -26,13 +27,26 @@ const useStyles = makeStyles(theme => ({
       paddingTop: '5em'
     }
   },
+  container: {
+     justifyContent: 'space-evenly',
+     [theme.breakpoints.down('md')]: {
+       marginTop: '5rem'
+     },
+     [theme.breakpoints.down('xs')]: {
+       marginTop: 0,
+      paddingBottom: '5rem'
+     }
+  },
+  
   logo: {
     height: '3em',
+    
     [theme.breakpoints.down('md')]: {
       height: '2em'
     },
     [theme.breakpoints.down('xs')]: {
-      height: '2em'
+      height: '2em',
+      marginLeft: '4.5rem',
     }
   },
   logo2: {
@@ -58,6 +72,12 @@ const useStyles = makeStyles(theme => ({
         marginBottom: '2em'
     }
   },
+  text1: {
+    color: 'white',
+    '&:last-child': {
+      marginBottom: '4rem'
+    }
+  }
  
 }));
 
@@ -66,72 +86,27 @@ const Footer = () => {
   return (
     <div>
       <footer className={classes.footer}>
-        <Grid
-          justify="center"
-          spacing={0}
-          alignItems="center"
-          container
-          className={classes.mainContainer}
-        >
-          <Grid md={3} xs={12} className={classes.gridItem} item>
-            <Grid
-              container
-              alignItems="center"
-              className={classes.iconContainer}
-              direction="column"
-            >
-              <Grid item>
-                <img
-                  className={classes.logo2}
-                  src={logoImage}
-                  alt=""
-                />
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid md={3} xs={12} className={classes.gridItem} item>
-            <Grid
-              container
-              alignItems="center"
-              className={classes.iconContainer}
-              direction="column"
-            >
-              <Grid item>
-                <HomeIcon fontSize="large" />
-              </Grid>
-              <Grid item>Stensrudvegen 1, 2335 Stange</Grid>
-            </Grid>
-          </Grid>
-
-          <Grid md={3} xs={12} className={classes.gridItem} item>
-            <Grid
-              container
-              alignItems="center"
-              className={classes.iconContainer}
-              direction="column"
-            >
-              <Grid item>
-                <PhoneInTalkIcon fontSize="large" />
-              </Grid>
-              <Grid item className={classes.phoneNumber}>95 23 68 82</Grid>
-            </Grid>
-          </Grid>
-
-          <Grid md={3} xs={12} className={classes.gridItem} item>
-            <Grid
-              container
-              alignItems="center"
-              className={classes.iconContainer}
-              direction="column"
-            >
-              <Grid item>
-                <MailIcon fontSize="large" />
-              </Grid>
-              <Grid item>post@stridsberg.no</Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+         <Grid className={classes.container} container>
+           <Grid  item>
+             <Typography className={classes.text1}>Kvarnstrands & Stridsbergs AS</Typography>
+             <Typography className={classes.text1}>Stensrudvegen 1</Typography>
+             <Typography className={classes.text1}>2335 Stange</Typography>
+             <br/>
+             <Typography className={classes.text1}>tel: 952 36 882</Typography>
+             <Typography className={classes.text1}>email: post@stridsbergs.no</Typography>
+           </Grid>
+           <Grid item>
+           <Typography className={classes.text1}>Åpningstider:</Typography>
+             <Typography className={classes.text1}>Verksted:</Typography>
+             <Typography className={classes.text1}>mandag - torsdag: 07:00 - 16:00</Typography>
+             <br/>
+             <Typography className={classes.text1}>Administrasjon:</Typography>
+            
+             <Typography className={classes.text1}>mandag - torsdag: 07:00 - 16:00</Typography>
+             <Typography className={classes.text1}>fredag: 08:00 - 13:00</Typography>
+           </Grid>
+           <Grid lg={6} md={2} sm={9} xs={12} item><img src={logoImage} alt="Logo" className={classes.logo}/></Grid>
+         </Grid>
       </footer>
     </div>
   );

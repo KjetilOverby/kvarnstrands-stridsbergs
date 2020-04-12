@@ -4,7 +4,10 @@ import ProductComponentBox from '../components/ProductComponentBox';
 
 const useStyles = makeStyles(theme => ({
    productContainer: {
-       background: theme.palette.customWhite.white
+       background: theme.palette.customWhite.white,
+     
+    
+     
    },
    imgBg: {
       background: 'url("https://images.unsplash.com/photo-1422246654994-34520d5a0340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")',

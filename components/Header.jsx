@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
     ...theme.typography.tab,
     [theme.breakpoints.down('lg')]: {
       marginLeft: '1px',
-      fontSize: '0.9rem'
+      fontSize: '0.9rem',
     }
   },
   drawerIcon: {
@@ -129,28 +129,24 @@ const Header = props => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const [activeTab, setActiveTab] = useState(0);
-
+  const [color, setColor] = useState('blue')
   const changeActiveTab = (e, value) => {
     setActiveTab(value);
   };
   useEffect(() => {
     if (window.location.pathname === '/' && activeTab !== 0) {
       setActiveTab(0);
-    } else if (window.location.pathname === '/services' && activeTab !== 1) {
+    } else if (window.location.pathname === '/produkter' && activeTab !== 1) {
       setActiveTab(1);
-    } else if (window.location.pathname === '/Om Oss' && activeTab !== 2) {
+    } else if (window.location.pathname === '/slipeservice' && activeTab !== 2) {
       setActiveTab(2);
-    } else if (window.location.pathname === '/Produkter' && activeTab !== 3) {
+    } else if (window.location.pathname === '/kontakt' && activeTab !== 3) {
       setActiveTab(3);
-    } else if (window.location.pathname === '/kontakt' && activeTab !== 4) {
+    } else if (window.location.pathname === '/stilling' && activeTab !== 4) {
       setActiveTab(4);
-    } else if (window.location.pathname === '/stilling' && activeTab !== 5) {
-      setActiveTab(5);
-    } else if (window.location.pathname === '/salgsbetingelser' && activeTab !== 5) {
-      setActiveTab(5);
-    } else if (window.location.pathname === '/slipeservice' && activeTab !== 5) {
-      setActiveTab(5);
-    }
+    } else if (window.location.pathname === '/salgsbetingelser' && activeTab !== 4) {
+      setActiveTab(4);
+    } 
   }, [activeTab]);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -162,13 +158,15 @@ const Header = props => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  
 
   const tabs = (
     <Tabs
-      value={activeTab}
+      value={2}
       className={classes.tabContainer}
       onChange={changeActiveTab}
-      indicatorColor="primary"
+      indicatorColor="secondary"
+      
     >
       <Link href="/">
         <Tab className={classes.tab} label="Hjem" />
@@ -307,7 +305,10 @@ const Header = props => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
+      
       <div className={classes.toolbarMargin} />
+
+      
     </React.Fragment>
   );
 };
