@@ -10,6 +10,8 @@ const blackThemeSecondary = '#fff'
 //Green Theme (16 Sleek and Futuristic)
 const greenThemePrimary = '#2c3531'
 const greenThemeSecondary = '#d9b08c'
+
+const customOrange = '#FF4500'
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
@@ -31,6 +33,9 @@ const theme = createMuiTheme({
     },
     customWhite: {
       white: '#f4efe8'
+    },
+    customOrange: {
+      main: '#FF4500'
     }
   },
   typography: {
@@ -43,5 +48,7 @@ const theme = createMuiTheme({
     }
   }
 });
+
+
 
 export default theme;

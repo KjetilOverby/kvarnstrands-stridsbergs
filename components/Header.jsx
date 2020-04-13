@@ -165,7 +165,7 @@ const Header = props => {
       value={2}
       className={classes.tabContainer}
       onChange={changeActiveTab}
-      indicatorColor="secondary"
+      indicatorColor=""
       
     >
       <Link href="/">
