@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
        height: '40vh',
        backgroundPosition: 'center'
     },
+    [theme.breakpoints.down('lg')]: {
+       height: '50vh',
+       backgroundPosition: '50% 20%'
+    },
     [theme.breakpoints.down('md')]: {
       
     backgroundAttachment: 'initial',
@@ -50,11 +54,15 @@ const useStyles = makeStyles(theme => ({
       },
       [theme.breakpoints.down('lg')]: {
         margin: '5rem 10rem',
-        width: '33vw'
+        width: '33vw',
+        height: '30vh'
       },
       [theme.breakpoints.down('md')]: {
         margin: '3rem 4rem',
         width: '40vw'
+      },
+      [theme.breakpoints.down('sm')]: {
+        width: '42vw'
       },
       [theme.breakpoints.down('xs')]: {
         margin: '1rem 1rem',
@@ -83,12 +91,18 @@ const useStyles = makeStyles(theme => ({
       fontSize: '3rem',
       lineHeight: '1.5rem'
       },
+      [theme.breakpoints.down('lg')]: {
+      fontSize: '2rem'
+      },
       [theme.breakpoints.down('md')]: {
           marginTop: '-1.5rem',
           marginBottom: '1rem',
           fontSize: '2.5rem',
           paddingTop: '1rem',
           
+        },
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '2rem'
         },
         [theme.breakpoints.down('xs')]: {
           fontSize: '1.3rem',

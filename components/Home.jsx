@@ -27,7 +27,9 @@ const useStyles = makeStyles(theme => ({
     color: 'white'
   },
   typo: {
-    marginBottom: '3rem'
+   
+      marginBottom: '3rem'
+    
   },
   section2: {
     paddingTop: '1rem',
@@ -96,8 +98,11 @@ const Home = () => {
               </Grid>
               <Grid item>
                 <Typography variant="h5">Verksted:</Typography>
-                <Typography className={classes.typo}>
+                <Typography>
                   Mandag - Torsdag: 07:00 - 16:00
+                </Typography>
+                <Typography className={classes.typo}>
+                  fredag: 07:00 - 13:00
                 </Typography>
                 <Typography variant="h5">Administrasjon:</Typography>
                 <Typography>Mandag - Torsdag: 08:00 - 16:00</Typography>

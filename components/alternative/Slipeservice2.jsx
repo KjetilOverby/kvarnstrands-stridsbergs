@@ -50,7 +50,8 @@ const useStyles = makeStyles((theme) => ({
   
     [theme.breakpoints.down('lg')]: {
       padding: '1rem',
-      margin: '2rem 0 2rem 10rem'
+      margin: '2rem 0 2rem 5rem',
+      height: '20rem'
     },
     [theme.breakpoints.down('md')]: {
       padding: '1rem',
@@ -274,7 +275,7 @@ const Slipeservice2 = () => {
     </Grid>
     <Grid item>
       <Typography className={classes.serviceHeader}>
-        Sirkel sagblad
+        Sirkelsagblad
       </Typography>
       <br/>
       <Grid container className={classes.innerContainer}>

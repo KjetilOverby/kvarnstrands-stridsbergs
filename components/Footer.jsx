@@ -74,6 +74,9 @@ const useStyles = makeStyles(theme => ({
   },
   text1: {
     color: 'white',
+    '&:first-child': {
+      marginBottom: '1rem'
+    },
     '&:last-child': {
       marginBottom: '4rem'
     }
@@ -99,6 +102,7 @@ const Footer = () => {
            <Typography className={classes.text1}>Åpningstider:</Typography>
              <Typography className={classes.text1}>Verksted:</Typography>
              <Typography className={classes.text1}>mandag - torsdag: 07:00 - 16:00</Typography>
+             <Typography className={classes.text1}>fredag: 07:00 - 13:00</Typography>
              <br/>
              <Typography className={classes.text1}>Administrasjon:</Typography>
             
