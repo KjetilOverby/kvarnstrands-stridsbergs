@@ -46,7 +46,22 @@ const theme = createMuiTheme({
       fontweight: 600
     
     }
-  }
+  },
+  overrides: {
+    MuiInputLabel: {
+        root: {
+            color: '#118877'
+        }
+    },
+    MuiInput: {
+      underline: {
+        "&:before": {
+          borderBottom: '2px solid seagreen'
+        }
+      }
+    }
+}
+
 });
 
 

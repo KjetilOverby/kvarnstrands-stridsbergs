@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Typography, Grid, makeStyles } from '@material-ui/core';
+import {  Typography, Grid, makeStyles, Button, Link } from '@material-ui/core';
 
 import ContactComponent from '../contacts/ContactComponent';
 
@@ -113,7 +113,8 @@ const useStyles = makeStyles(theme => ({
     },
     text: {
       color: 'gray',
-      marginTop: '1rem'
+      marginTop: '1rem',
+      marginBottom: '2rem'
     }
 }))
 const Contacts = () => {
@@ -127,6 +128,9 @@ const Contacts = () => {
       <Typography className={classes.textAboveHeader}>Vi kan hjelpe!</Typography>
         <Typography className={classes.header} variant="h3">TA KONTAKT I DAG</Typography>
         <Typography className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores quisquam deleniti necessitatibus excepturi.</Typography>
+        <Link style={{textDecoration: 'none'}} href='/kontaktskjema'>
+        <Button variant='contained'>Kontaktskjema</Button>
+        </Link>
         </Grid>
       </Grid>
        <Grid item>
