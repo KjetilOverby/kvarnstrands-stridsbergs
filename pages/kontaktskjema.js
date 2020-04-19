@@ -1,14 +1,24 @@
-import FormComponent from "../components/FormComponent"
+import FormComponent from "../components/contact/map/FormComponent"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
+
+
+
+
 const KontaktSkjema = () => {
+  
   return (
-    <div>
+    <>
     <Header />
+    <div style={{backgroundColor: 'white'}}>
+   
        <FormComponent />
+       </div>
      <Footer />
-    </div>
+    
+     </>
+   
   )
 }
 
