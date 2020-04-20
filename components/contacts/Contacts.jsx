@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       
     backgroundAttachment: 'initial',
-    height: '45vh',
+    height: '55vh',
     backgroundPosition: 'center'
     },
     [theme.breakpoints.down('sm')]: {
@@ -59,14 +59,16 @@ const useStyles = makeStyles(theme => ({
       },
       [theme.breakpoints.down('md')]: {
         margin: '3rem 4rem',
-        width: '40vw'
+        width: '40vw',
+        height: '50vw'
       },
       [theme.breakpoints.down('sm')]: {
         width: '42vw'
       },
       [theme.breakpoints.down('xs')]: {
         margin: '1rem 1rem',
-        width: '50vw'
+        width: '50vw',
+        height: '100vw'
       },
       [theme.breakpoints.down(350)]: {
         margin: '1rem 1rem',
@@ -80,6 +82,8 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.2rem'
   }
   },
+
+ 
     header: {
       marginBottom: '1.5rem',
       color: 'orangered',
@@ -129,7 +133,7 @@ const Contacts = () => {
         <Typography className={classes.header} variant="h3">TA KONTAKT I DAG</Typography>
         <Typography className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores quisquam deleniti necessitatibus excepturi.</Typography>
         <Link style={{textDecoration: 'none'}} href='/kontaktskjema'>
-        <Button variant='contained'>Kontaktskjema</Button>
+        <Button className={classes.button} variant='contained'>Kontaktskjema</Button>
         </Link>
         </Grid>
       </Grid>
