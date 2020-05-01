@@ -1,21 +1,16 @@
-require('dotenv').config()
+// const withPlugins = require('next-compose-plugins');
+// const withDotEnv = require('dotenv').config();
 const withImages = require('next-images')
 
 
+
+
+
+require('dotenv').config()
+
 module.exports = withImages({
-  webpack(config, options) {
-    env: {
-           SENDGRID_API_KEY: process.env.SENDGRID_API_KEY
-         }
-    return config
-  }
+  env: {
+    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY
+  },
+ 
 })
-
-
-// require('dotenv').config()
-
-// module.exports = {
-//   env: {
-//     SENDGRID_API_KEY: process.env.SENDGRID_API_KEY
-//   }
-// }

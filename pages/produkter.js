@@ -7,9 +7,9 @@ import ProdukterComponent from "../components/ProdukterComponent"
 const Produkter = () => {
     return (
         <div>
-            <Header />
-            <ProdukterComponent />
-            <Footer />
+         <Header />
+         <ProdukterComponent />
+         <Footer />
         </div>
     )
 }

@@ -6,9 +6,9 @@ import SalgsbetingelserComponent from "../components/SalgsbetingelserComponent"
 const Salgsbetingelser = () => {
     return (
         <div>
-           <Header />
-           <SalgsbetingelserComponent />
-           <Footer />
+       <Header />
+       <SalgsbetingelserComponent />
+       <Footer />
         </div>
     )
 }

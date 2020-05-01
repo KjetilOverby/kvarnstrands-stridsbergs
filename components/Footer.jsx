@@ -109,7 +109,9 @@ const Footer = () => {
              <Typography className={classes.text1}>mandag - torsdag: 07:00 - 16:00</Typography>
              <Typography className={classes.text1}>fredag: 08:00 - 13:00</Typography>
            </Grid>
-           <Grid lg={6} md={2} sm={9} xs={12} item><img src={logoImage} alt="Logo" className={classes.logo}/></Grid>
+           <Grid lg={6} md={2} sm={9} xs={12} item>
+           <img src={logoImage} alt="Logo" className={classes.logo}/>
+           </Grid>
          </Grid>
       </footer>
     </div>

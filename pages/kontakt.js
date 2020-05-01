@@ -9,9 +9,9 @@ import Contacts from "../components/contacts/Contacts"
 const Kontakt = () => {
     return (
         <div >
-        <Header />
-            <Contacts />
-            <Footer />
+      <Header />
+      <Contacts />
+      <Footer />
         </div>
     )
 }

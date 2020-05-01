@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, makeStyles, Typography, Grid, useMediaQuery, useTheme } from '@material-ui/core';
 
-import handShake from '../images/handshakeBlackTheme.png';
+
 import kvarnstrandsLogo from '../images/kvarnstrandsLogoBlackTheme.png'
 import SlipeserviceComponentComputer from './SlipeserviceComponentComputer';
 

@@ -74,6 +74,12 @@ const useStyles = makeStyles((theme) => ({
    icon: {
      marginLeft: '1rem',
      fontSize: '1rem'
+   },
+  btn: {
+    width: '100%'
+  },
+   info: {
+     marginTop: '1rem'
    }
   
 }));
@@ -220,6 +226,7 @@ export default () => {
                 variant="contained"
                 type="submit"
                 disabled={status.submitting}
+                className={classes.btn}
               >
                 {!status.submitting
                   ? !status.submitted
@@ -232,12 +239,12 @@ export default () => {
           </Grid>
           <Grid item>
             {status.info.error && (
-              <Alert className={classes.roots} severity="error">
+              <Alert className={classes.info} severity="error">
                 {status.info.msg}
               </Alert>
             )}
             {!status.info.error && status.info.msg && (
-              <Alert className={classes.roots} severity="success">
+              <Alert className={classes.info} severity="success">
                 {status.info.msg}
               </Alert>
             )}

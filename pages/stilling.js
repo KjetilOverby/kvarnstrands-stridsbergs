@@ -7,9 +7,9 @@ import StillingLedig from "../components/StillingLedig"
 const Stilling = () => {
     return (
         <div>
-           <Header />
-           <StillingLedig />
-           <Footer />
+         <Header />
+         <StillingLedig />
+         <Footer />
         </div>
     )
 }

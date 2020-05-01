@@ -6,9 +6,9 @@ import Slipeservice2 from '../components/alternative/Slipeservice2';
 const Sliperservice = () => {
   return (
     <div>
-      <Header />
-      <Slipeservice2 />
-      <Footer />
+    <Header />
+    <Slipeservice2 />
+    <Footer />
     </div>
   );
 };
